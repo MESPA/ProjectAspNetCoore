@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "H:\\ProyectoCore\\WebApi\\WebApi.csproj": {}
+    "C:\\ProyectoCore\\webapi\\WebApi.csproj": {}
   },
   "projects": {
-    "H:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
+    "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
+        "projectUniqueName": "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
         "projectName": "Aplicacion",
-        "projectPath": "H:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "H:\\ProyectoCore\\Aplicacion\\obj\\",
+        "projectPath": "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
+        "packagesPath": "C:\\Users\\program2\\.nuget\\packages\\",
+        "outputPath": "C:\\ProyectoCore\\Aplicacion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\program2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,11 +30,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "H:\\ProyectoCore\\Dominio\\Dominio.csproj": {
-                "projectPath": "H:\\ProyectoCore\\Dominio\\Dominio.csproj"
+              "C:\\ProyectoCore\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\ProyectoCore\\Dominio\\Dominio.csproj"
               },
-              "H:\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
-                "projectPath": "H:\\ProyectoCore\\Persistencia\\Persistencia.csproj"
+              "C:\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
+                "projectPath": "C:\\ProyectoCore\\Persistencia\\Persistencia.csproj"
               }
             }
           }
@@ -75,24 +75,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "H:\\ProyectoCore\\Dominio\\Dominio.csproj": {
+    "C:\\ProyectoCore\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\ProyectoCore\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\ProyectoCore\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "H:\\ProyectoCore\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "H:\\ProyectoCore\\Dominio\\obj\\",
+        "projectPath": "C:\\ProyectoCore\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\program2\\.nuget\\packages\\",
+        "outputPath": "C:\\ProyectoCore\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\program2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -115,6 +115,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -133,24 +139,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "H:\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
+    "C:\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\ProyectoCore\\Persistencia\\Persistencia.csproj",
+        "projectUniqueName": "C:\\ProyectoCore\\Persistencia\\Persistencia.csproj",
         "projectName": "Persistencia",
-        "projectPath": "H:\\ProyectoCore\\Persistencia\\Persistencia.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "H:\\ProyectoCore\\Persistencia\\obj\\",
+        "projectPath": "C:\\ProyectoCore\\Persistencia\\Persistencia.csproj",
+        "packagesPath": "C:\\Users\\program2\\.nuget\\packages\\",
+        "outputPath": "C:\\ProyectoCore\\Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\program2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -163,8 +169,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "H:\\ProyectoCore\\Dominio\\Dominio.csproj": {
-                "projectPath": "H:\\ProyectoCore\\Dominio\\Dominio.csproj"
+              "C:\\ProyectoCore\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\ProyectoCore\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -209,24 +215,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "H:\\ProyectoCore\\WebApi\\WebApi.csproj": {
+    "C:\\ProyectoCore\\webapi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\ProyectoCore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\ProyectoCore\\webapi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "H:\\ProyectoCore\\WebApi\\WebApi.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "H:\\ProyectoCore\\WebApi\\obj\\",
+        "projectPath": "C:\\ProyectoCore\\webapi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\program2\\.nuget\\packages\\",
+        "outputPath": "C:\\ProyectoCore\\webapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\program2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -239,8 +245,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "H:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
-                "projectPath": "H:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
+              "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
+                "projectPath": "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
               }
             }
           }
@@ -285,7 +291,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
