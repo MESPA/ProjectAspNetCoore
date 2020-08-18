@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using Dominio;
 using Microsoft.AspNetCore.Identity;
 
+
+//registrar usuario en identity core
 namespace Persistencia
 {
     public class DataPreba

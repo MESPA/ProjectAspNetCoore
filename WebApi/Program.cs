@@ -9,6 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Persistencia;
+using Dominio;
+using Microsoft.AspNetCore.Identity;
 
 namespace WebApi
 {
@@ -24,8 +26,11 @@ namespace WebApi
 
                 try
                 {
+                    var userrManager = services.GetRequiredService<UserManager<Usuario>>();
                     var context = services.GetRequiredService<CursosDbContext>();
                     context.Database.Migrate();
+                    //registrar usuario en identity core
+                    DataPreba.Insertdata(context, userrManager).Wait();
 
                 }
                 catch (Exception e)

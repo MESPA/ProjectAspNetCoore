@@ -18,6 +18,8 @@ using FluentValidation.AspNetCore;
 using WebApi.Middleware;
 using Dominio;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.AspNetCore.Authentication;
 
 namespace WebApi
 {
@@ -46,6 +48,8 @@ namespace WebApi
             var identityBuilder = new IdentityBuilder(builder.UserType, builder.Services);
             identityBuilder.AddEntityFrameworkStores<CursosDbContext>();
             identityBuilder.AddSignInManager<SignInManager<Usuario>>();
+            //registro de usuario en core identity
+            services.TryAddSingleton<ISystemClock, SystemClock>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
