@@ -22,6 +22,12 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Authentication;
 using Aplicacion.Contratos;
 using Seguridad;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using AutoMapper;
 
 namespace WebApi
 {
@@ -44,8 +50,13 @@ namespace WebApi
 
             services.AddMediatR(typeof(Consulta.Manejador).Assembly);
             //agregar libreria de validacion fluent
-            services.AddControllers().AddFluentValidation(cfg => cfg.RegisterValidatorsFromAssemblyContaining<Nuevo>())
-            ;
+            services.AddControllers(opt =>
+            {
+                //seguridad generica para controladores
+                var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                opt.Filters.Add(new AuthorizeFilter(policy));
+            })
+            .AddFluentValidation(cfg => cfg.RegisterValidatorsFromAssemblyContaining<Nuevo>());
             var builder = services.AddIdentityCore<Usuario>();
             var identityBuilder = new IdentityBuilder(builder.UserType, builder.Services);
             identityBuilder.AddEntityFrameworkStores<CursosDbContext>();
@@ -53,8 +64,28 @@ namespace WebApi
             //registro de usuario en core identity
             services.TryAddSingleton<ISystemClock, SystemClock>();
 
+
+            //autorizacion en los controladores instalar Microsoft.AspNetCore.Authentication.JwtBeare
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Mi palabra secreta"));
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+            {
+                opt.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = key,
+                    //validar la ip de la compania a la quese le van a realizar la implementacion
+                    ValidateAudience = false,
+                    ValidateIssuer = false
+                };
+            });
+
             //injeccion de la interfas jwt /seguridad
             services.AddScoped<IJwtGenerador, JwtGenerador>();
+            services.AddScoped<IUsuarioSesion, UsuarioSesion>();
+            //injection de auto mapper
+            services.AddAutoMapper(typeof(Consulta.Manejador));
+
+            //obtener usuario sesion 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -70,6 +101,8 @@ namespace WebApi
             }
 
             //app.UseHttpsRedirection();
+            //agregar para la autenticacion
+            app.UseAuthentication();
 
             app.UseRouting();
 

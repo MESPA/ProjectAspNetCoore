@@ -6,6 +6,7 @@ using MediatR;
 using Persistencia;
 using System.ComponentModel.DataAnnotations;
 using FluentValidation;
+using System.Collections.Generic;
 
 namespace Aplicacion.Cursos
 {
@@ -18,6 +19,7 @@ namespace Aplicacion.Cursos
             public string Titulo { get; set; }
             public string Descripcion { get; set; }
             public DateTime? FechaPublicacion { get; set; }
+            public List<Guid> ListaInstructor { get; set; } //data de instructor
         }
         //validacion con fluent
         public class EjecutaValidar : AbstractValidator<Ejecuta>
@@ -40,13 +42,28 @@ namespace Aplicacion.Cursos
 
             public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
+                Guid _cursoId = Guid.NewGuid();
                 var crear = new Curso
                 {
+                    CursoId = _cursoId,
                     Titulo = request.Titulo,
                     Descripcion = request.Descripcion,
                     FechaPublicacion = request.FechaPublicacion
                 };
                 _context.Curso.Add(crear);
+                if (request.ListaInstructor != null)
+                {
+                    foreach (var id in request.ListaInstructor)
+                    {
+                        var cursoInstructor = new CursoInstructor
+                        {
+                            CursoId = _cursoId,
+                            InstructorId = id
+                        };
+                        _context.CursoInstructor.Add(cursoInstructor);
+                    }
+                }
+
                 var valor = await _context.SaveChangesAsync();
                 if (valor > 0)
                 {

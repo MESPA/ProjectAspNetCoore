@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Aplicacion.Cursos;
 using Dominio;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
@@ -14,14 +16,15 @@ namespace WebApi.Controllers
     {
 
         [HttpGet]
-        public async Task<ActionResult<List<Curso>>> Get()
+
+        public async Task<ActionResult<List<CursoDTO>>> Get()
         {
             return await Mediator.Send(new Consulta.ListaCursos());
         }
 
         //http://localhos:5000/api/Cursos/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<Curso>> Detalle(int id)
+        public async Task<ActionResult<CursoDTO>> Detalle(Guid id)
         {
             return await Mediator.Send(new ConsultaId.CursoUnico { Id = id });
         }
