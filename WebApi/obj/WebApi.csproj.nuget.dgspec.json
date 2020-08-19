@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ProyectoCore\\WebApi\\WebApi.csproj": {}
+    "c:\\ProyectoCore\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
+    "c:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
+        "projectUniqueName": "c:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
         "projectName": "Aplicacion",
-        "projectPath": "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
+        "projectPath": "c:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
         "packagesPath": "C:\\Users\\program2\\.nuget\\packages\\",
-        "outputPath": "C:\\ProyectoCore\\Aplicacion\\obj\\",
+        "outputPath": "c:\\ProyectoCore\\Aplicacion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,11 +30,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\ProyectoCore\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\ProyectoCore\\Dominio\\Dominio.csproj"
+              "c:\\ProyectoCore\\Dominio\\Dominio.csproj": {
+                "projectPath": "c:\\ProyectoCore\\Dominio\\Dominio.csproj"
               },
-              "C:\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
-                "projectPath": "C:\\ProyectoCore\\Persistencia\\Persistencia.csproj"
+              "c:\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
+                "projectPath": "c:\\ProyectoCore\\Persistencia\\Persistencia.csproj"
               }
             }
           }
@@ -83,14 +83,14 @@
         }
       }
     },
-    "C:\\ProyectoCore\\Dominio\\Dominio.csproj": {
+    "c:\\ProyectoCore\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ProyectoCore\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "c:\\ProyectoCore\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\ProyectoCore\\Dominio\\Dominio.csproj",
+        "projectPath": "c:\\ProyectoCore\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\program2\\.nuget\\packages\\",
-        "outputPath": "C:\\ProyectoCore\\Dominio\\obj\\",
+        "outputPath": "c:\\ProyectoCore\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -147,14 +147,14 @@
         }
       }
     },
-    "C:\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
+    "c:\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ProyectoCore\\Persistencia\\Persistencia.csproj",
+        "projectUniqueName": "c:\\ProyectoCore\\Persistencia\\Persistencia.csproj",
         "projectName": "Persistencia",
-        "projectPath": "C:\\ProyectoCore\\Persistencia\\Persistencia.csproj",
+        "projectPath": "c:\\ProyectoCore\\Persistencia\\Persistencia.csproj",
         "packagesPath": "C:\\Users\\program2\\.nuget\\packages\\",
-        "outputPath": "C:\\ProyectoCore\\Persistencia\\obj\\",
+        "outputPath": "c:\\ProyectoCore\\Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -173,8 +173,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\ProyectoCore\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\ProyectoCore\\Dominio\\Dominio.csproj"
+              "c:\\ProyectoCore\\Dominio\\Dominio.csproj": {
+                "projectPath": "c:\\ProyectoCore\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -188,6 +188,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.30, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.7, )"
@@ -223,14 +227,14 @@
         }
       }
     },
-    "C:\\ProyectoCore\\Seguridad\\Seguridad.csproj": {
+    "c:\\ProyectoCore\\Seguridad\\Seguridad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ProyectoCore\\Seguridad\\Seguridad.csproj",
+        "projectUniqueName": "c:\\ProyectoCore\\Seguridad\\Seguridad.csproj",
         "projectName": "Seguridad",
-        "projectPath": "C:\\ProyectoCore\\Seguridad\\Seguridad.csproj",
+        "projectPath": "c:\\ProyectoCore\\Seguridad\\Seguridad.csproj",
         "packagesPath": "C:\\Users\\program2\\.nuget\\packages\\",
-        "outputPath": "C:\\ProyectoCore\\Seguridad\\obj\\",
+        "outputPath": "c:\\ProyectoCore\\Seguridad\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -249,8 +253,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
-                "projectPath": "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
+              "c:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
+                "projectPath": "c:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
               }
             }
           }
@@ -291,14 +295,14 @@
         }
       }
     },
-    "C:\\ProyectoCore\\WebApi\\WebApi.csproj": {
+    "c:\\ProyectoCore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ProyectoCore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "c:\\ProyectoCore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\ProyectoCore\\WebApi\\WebApi.csproj",
+        "projectPath": "c:\\ProyectoCore\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\program2\\.nuget\\packages\\",
-        "outputPath": "C:\\ProyectoCore\\WebApi\\obj\\",
+        "outputPath": "c:\\ProyectoCore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -317,11 +321,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
-                "projectPath": "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
+              "c:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
+                "projectPath": "c:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
               },
-              "C:\\ProyectoCore\\Seguridad\\Seguridad.csproj": {
-                "projectPath": "C:\\ProyectoCore\\Seguridad\\Seguridad.csproj"
+              "c:\\ProyectoCore\\Seguridad\\Seguridad.csproj": {
+                "projectPath": "c:\\ProyectoCore\\Seguridad\\Seguridad.csproj"
               }
             }
           }

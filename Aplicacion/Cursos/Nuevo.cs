@@ -20,6 +20,8 @@ namespace Aplicacion.Cursos
             public string Descripcion { get; set; }
             public DateTime? FechaPublicacion { get; set; }
             public List<Guid> ListaInstructor { get; set; } //data de instructor
+            public decimal Precio { get; set; }
+            public decimal Promocion { get; set; }
         }
         //validacion con fluent
         public class EjecutaValidar : AbstractValidator<Ejecuta>
@@ -63,6 +65,17 @@ namespace Aplicacion.Cursos
                         _context.CursoInstructor.Add(cursoInstructor);
                     }
                 }
+
+                //logica para insertar un prcio al curso creado
+                var precioentidad = new Precio
+                {
+                    CursoId = _cursoId,
+                    PrecioActual = request.Precio,
+                    Promocion = request.Promocion,
+                    PrecioId = Guid.NewGuid()
+
+                };
+                _context.Precio.Add(precioentidad);
 
                 var valor = await _context.SaveChangesAsync();
                 if (valor > 0)
